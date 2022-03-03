@@ -13,7 +13,7 @@ public class User {
 
     @Id //c'est une clé primaire
     @GeneratedValue(strategy = GenerationType.IDENTITY) //signifie auto-incremente
-    private Long id;
+    private BigInteger id;
 
     @Column(name = "lastname")
     private String nom;
@@ -34,11 +34,11 @@ public class User {
     public User() {
     }
 
-    public Long getId() {
+    public BigInteger getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(BigInteger id) {
         this.id = id;
     }
 

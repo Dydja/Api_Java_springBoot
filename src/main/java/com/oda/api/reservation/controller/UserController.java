@@ -61,7 +61,7 @@ public class UserController {
      * @return
      */
      @PutMapping("/api/v1/users/{id}")
-     public User updateUser(@PathVariable("id") final BigInteger id,@RequestBody User user){
+     public User updateUser(@PathVariable("id") final BigInteger id, @RequestBody User user){
          Optional<User> customer = userService.getUser(id);
          if(customer.isPresent()){
              User currentUser = customer.get();
